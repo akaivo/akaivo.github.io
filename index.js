@@ -17,6 +17,12 @@ const copyOnClick = elementId => {
   }
 };
 
+const removeElementById = (elementId) => {
+  var element = document.getElementById(elementId);
+  if(element) {
+    element.parentNode.removeChild(element);
+  }
+}
 const onUpdateInformation = customAttributesUpdateMethod => {
   const customAttributes = JSON.parse(document.getElementById('updateInformation').value);
   getGlia().then(glia => {
